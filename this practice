@@ -1,0 +1,20 @@
+function Cat(age, color) {
+  this.age = age;
+  this.color = color;
+}
+
+// make a Dog constructor here
+function Dog(age, color, breed, name, numberOfLegs ) {
+    this.name= name;
+    this.age = age;
+    this.color = color;
+    this.breed = breed;
+    this.numberOfLegs = numberOfLegs;
+}
+
+var tigger = new Cat( 4, "orange");
+var katze = new Cat( 6, "grey");
+
+var max = new Dog( 9, "black", "black lab", "Max", 4)
+
+console.log( max, tigger, katze );
