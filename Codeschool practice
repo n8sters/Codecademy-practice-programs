@@ -30,4 +30,17 @@ post2.postNum = 2;
 post1.sendRopeTo(post2);
 post2.sendRopeTo(post1);
 
+//now with an Object constructor!!1! 
+
+function Fencepost(x, y, postNum) {
+  this.x = x;
+  this.y = y;
+  this.postNum = postNum;
+  this.connectionsTo = [];
+  this.sendRopeTo = function(connectedPost) {
+    this.connectionsTo.push(connectedPost);
+  };
+}
+
+
 
