@@ -1,0 +1,40 @@
+function Character(name, race, skill, level) {
+    this.name = name;
+    this.race = race;
+    this.skill = skill;
+    this.level = level;
+}
+
+function skillType(skill) {
+    var n = ( Math.random() * 10);
+    if (n > 0,  n<3) {
+        this.skill = "Archer";
+    } else if ( n >= 3, n < 6 ) {
+        this.skill =  "Bezerker";
+    } else {
+        this.skill =  "Mage"
+    }
+    return(this.skill)
+}
+
+function raceType(race) {
+    var n = ( Math.random() * 10);
+    if (n > 0,  n<2) {
+        this.race = "Human";
+    } else if ( n >= 2, n < 4 ) {
+        this.race =  "Elf";
+    } else if ( n >= 4, n < 6) {
+        this.race = "Dwarf";
+    } else if ( n >=6, n < 8){
+        this.race = "Undead"
+    } else {
+        this.race =  "Orc"
+    }
+    return(this.race)
+}
+var me = new Character("Nate", "Human", "Great Coder", 1)
+
+me.race = raceType();
+me.skill = skillType();
+
+console.log(me);
